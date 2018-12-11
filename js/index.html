@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="shortcut icon" href="/public/img/maple_leaf.ico" >
+  <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+  <title>UGC管理后台</title>
+  <!--[if lt IE 9]>
+  <script>location.href = "//www.taobao.com/markets/tbhome/ali-page-updater"; </script>
+  <!--<script type="text/javascript" src="./static/uploader.js"></script>-->
+  <![endif]-->
+</head>
+
+<body>
+  <div id="ice_container"></div>
+  <script type="text/javascript">
+    // 这个页面将会被弃置不用，改为用view上的页面
+    //生产地址判断
+    var env = "";
+    if(window.location.host.indexOf('.uc.cn') > -1){
+      var env = /\.test.\.uae\.uc\.cn/.test(window.location.host) ? 'test' : 'prod';
+    } else {
+      env = "test";
+    }
+
+    var version = "1.8.1";
+
+    var head = document.getElementsByTagName('body')[0];
+
+    //uploader sdk
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = env == 'prod' ? 'http://v.ums.uc.cn/sdk/uploader-1.1.3.js' : 'http://umsfrontend.test2.uae.uc.cn/sdk/uploader-develop-1.1.3.js';
+    head.appendChild(script);
+
+    //css
+    var css = document.createElement('link');
+    css.href = "http://g-assets.daily.taobao.net/UGC/ugc-admin-plat-web/"+version+"/index.css"
+    css.setAttribute('rel','stylesheet');
+    css.setAttribute('type','text/css');
+    head.appendChild(css);
+
+    //js
+    var appjs = document.createElement('script');
+    appjs.type = 'text/javascript';
+    appjs.src = "http://g-assets.daily.taobao.net/UGC/ugc-admin-plat-web/"+version+"/index.js";
+    head.appendChild(appjs);
+
+  </script>
+</body>
+
+
+</html>
