@@ -1,6 +1,6 @@
 // lifeTime 祯数
 const color1 = {
-  h: 279,
+  h: 0,
   s: '100%',
   l: '50%',
   a: '80%',
