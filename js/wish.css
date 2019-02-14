@@ -5198,9 +5198,9 @@ html {
 }
 
 .quote .highlight, .quote span:hover {
-	background: rgba(249, 106, 255, 0.1);
+	background: rgba(255, 26, 178, 0.1);
 	/*color: #df5cff;*/
-	color: rgba(245, 27, 27, 0.86);
+	color: rgba(245, 27, 27, 0.95);
 	text-shadow: 0 0 0.6em #ff166e;
 	-webkit-transform: translateZ(0) rotateX(0deg);
 	transform: translateZ(0) rotateX(0deg);
